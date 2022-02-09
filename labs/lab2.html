@@ -44,23 +44,27 @@
         <h2>Objective</h2>
 
 
-        <p>The purpose of this lab is to setup and become familiar with the Arduino IDE and the Artemis RedBoard Nano from Sparkfun. 
-          In this lab, We program the board, blink the LED, read/write serial messages over USB, display the output from the onboard temperature sensor, and measure the loudest frequency recorded by the Pulse Density Microphone.</p>
+        <p>The objective of this lab is to establish Bluetooth communication between the Artemis and the computer.
+           We need to implement Arduino code on the Artemis side and Python in Jupyter Notebook on the computer. The purpose of this is to offload computation to the computer later when we are performing computationally intensive tasks on the robot.</p>
         
         <h2>Materials and Tools Used </h2>
         <ul>
             <li>1 Sparkfun Artemis RedBoard Nano</li>
             <li>1 USB-C to USB-C Cable</li>
+            <li>bluetooth receiver</li>
         </ul>
         <h2>Procedure</h2>
         <ol>
             <li><h3>Setup</h3> <br>
-              IDE and Apollo3 board package was installed to allow the Artemis RedBoard Nano to be compatible.  Artemis RedBoard Nano was connected to the computer via the USB-C to USB-C Cable.<br></li>
+              Python virtual environment and jupyter lab setup.<br></li>
               <br>
               <li>
-                <h3>LED Blink</h3><br>
-                Next, the Blink example was uploaded to the board to make the built-in LED bilnk. The LED blinks repeatedly with an interval of 1s. The video below demostrates the program<br>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/k6O-4kXYSHc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Bluetooth Connection</h3><br>
+                
+                To properly establish a connnection to the artemis nano, we need to obtain the MAC address of the Artemis and edit the connection.yaml to reflect this address. <br>
+
+                
+
                 <br>
               </li>
             <li>
