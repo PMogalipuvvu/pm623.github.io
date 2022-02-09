@@ -63,6 +63,7 @@
                 
                 To properly establish a connnection to the artemis nano, we need to obtain the MAC address of the Artemis and edit the connection.yaml to reflect this address. <br>
                 We can then establish the connection using the ble library. Upon successful connection, we get the below message.
+                <img src="/img/lab2/Connection.png" alt="Img">
 
                 <br>
               </li>
@@ -74,7 +75,7 @@
                 <h3>ECHO</h3><br>
                 For the first task, we need to send a string to the arteemis from jupyter notebook. The artemis should receive the string and append "Robot says -> " to it before sending it back to the computer.
                 <br>
-                <img src="/img/ECHO_code_snippet.png" alt="Img">
+                <img src="/img/lab2/ECHO_code_snippet.png" alt="Img">
 
                 In the code snippet, we can see that the artemis appends "Robot says ->" in front of the received string before sending it back to the computer.
 
@@ -84,18 +85,23 @@
             <li>
               <h3>Send three floats</h3><br>
               For the next task, we beed to send three float values to the artemis, which needs to extract the individual values before printing it.
-              <img src="/img/THREE_FLOATS_code_snippet.png" alt="Img">
+              <img src="/img/lab2/THREE_FLOATS_code_snippet.png" alt="Img">
+
+              <img src="/img/lab2/Send_three_float_command.png" alt="Img">
 
               insert vid
 
               <br>
             </li>
             <li>
-              <h3>LED blink with Microphone</h3><br>
+              <h3>Receive float using Notification Handler</h3><br>
 
-              Next, We create a program where the LED lights up in response to sound heard b the onboard microphone. Here, the LED lights up when the frequency of the sound is greater than 2000Hz. <br>
+              Here, we need to receive a float value from Artemis in Python using the notification handler and update a gllobal parameter using this value. <br>
+
+              To use the notification handler, we need to first define a callback function that is able to convert the byte_array received form the handler to float, updat the global variabe and print the variable. <br>
+
+              insert image and vid
               
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/Zj-6YcKR1WE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               <br>
             </li>
         </ol>
