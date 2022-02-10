@@ -54,23 +54,20 @@
             <li>bluetooth receiver</li>
         </ul>
         <h2>Procedure</h2>
-        <ol>
-            <li><h3>Setup</h3> <br>
-              Python virtual environment and jupyter lab setup.<br></li>
+        
+            <h3>Setup</h3> <br>
+              Python virtual environment and jupyter lab setup.<br>
               <br>
-              <li>
-                <h3>Bluetooth Connection</h3><br>
+            <h3>Bluetooth Connection</h3><br>
                 
                 To properly establish a connnection to the artemis nano, we need to obtain the MAC address of the Artemis and edit the connection.yaml to reflect this address. <br>
                 We can then establish the connection using the ble library. Upon successful connection, we get the below message.
                 <img src="/img/lab2/Connection.png" alt="Img">
 
                 <br>
-              </li>
-            <li>
               <h3>Tasks</h3><br>
-              blah blah blah <br>          
-              </li>
+              <br>          
+            <ol>
             <li>
                 <h3>ECHO</h3><br>
                 For the first task, we need to send a string to the arteemis from jupyter notebook. The artemis should receive the string and append "Robot says -> " to it before sending it back to the computer.
@@ -103,8 +100,52 @@
 
               <iframe width="560" height="315" src="https://www.youtube.com/embed/84ORnXnHoMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               
+              Here, we can see that the python program comtinuously receives float values from the Artemis until we call the stop_notify method.
+
               <br>
             </li>
+
+
+            <li>
+              <h3>receive_float() vs recive_string</h3>
+
+              <p>The functions receive_float() and receive_string() will produce the same result, but the main difference is receive_float() will produce you a float value outright, while with receive_string(), you will have to convert the string into a float. However, there are other benfits with receive_string().
+                 For instance, if you want to send multiple float values in one go, you can benefit by sending them all in one string, using receive_string(), and then unpacking the multiple float values in the string. This is computationally less than having to send the multiple float values seperatly.
+                
+              </p>
+
+            </li>
+
+            <li>
+              <h3>Effective datarate</h3>
+
+              To calculate the effective data rate, we can send an echo command to the artemis and record the amount of time it takes to receive the response. We know the number of bytes in the message and time taken to send and receive the message, therefore, we can calculate the effective datarate by by dividing the total bytes by total time taken.
+
+              <img src="/img/lab2/effective_datarate.png" alt="Img">
+
+              We can send different lengths of messages to see if the datarate changes.  Here, we send messages with length of 10, 20, 30... 140 characters and measure the effective datarate.
+
+              <img src="/img/lab2/datarate_graph.png" alt="Img">
+
+              From the above graph, we can see that the data rate is not consistent and varies wildly as the length of the string changes,
+
+
+            </li>
+
+            <li>
+              <h3>Reliability</h3>
+
+              The artemis is initialy confgured to send the float values at and interval of 0.5s. We can decrease this time intervale to see if there is any loss in data when it is received by the python program.
+              
+              In the below video, the time interval was reduced to 10ms. We can see the all the data is being received corrctly.
+
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/xYJdE0HsdAE?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              Further reducing time interval to 1ms does not affect the data received. This suggests that the system is very robust.
+
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/JOd9J6D-Ts4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              
+              </li>
         </ol>
 
               
