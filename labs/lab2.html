@@ -109,9 +109,11 @@
             <li>
               <h3>receive_float() vs recive_string</h3>
 
-              <p>The functions receive_float() and receive_string() will produce the same result, but the main difference is receive_float() will produce you a float value outright, while with receive_string(), you will have to convert the string into a float. However, there are other benfits with receive_string().
-                 For instance, if you want to send multiple float values in one go, you can benefit by sending them all in one string, using receive_string(), and then unpacking the multiple float values in the string. This is computationally less than having to send the multiple float values seperatly.
+              <p>
                 
+                 In the first approach, python receives the float value as a byte array which is then converted to a float value. In the second approach, pyhton receives the string value as a byte array. We then convert each caracter to its corresponding float value.<br>
+
+                 Both methods are identical functionally. However, recieve_string has the advantage that we can send multiple folat values separated by a delimiter. receive_float can only read one value at a time.
               </p>
 
             </li>
