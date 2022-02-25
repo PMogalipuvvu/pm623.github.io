@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>ECE 5960: Fast Robots</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Praneeth Mogalipuvvu</h1>
+        
+        <p>Hello! Welcome to my website for ECE 5960: Fast Robots. Here, you will find my write-ups for each lab and a brief description of who I am.</p>
+        
+        <img src="/img/DSC_9724.png" alt="Img" width="200">
+        
+        <h2>Labs:</h2>
+        <ul>
+          <li><a href="/labs/lab1.html"> <strong>Lab 1</strong>Artemis</a></li>
+          <li><a href="/labs/lab2.html"> <strong>Lab 2</strong></a></li>
+          <li><a href="/labs/lab3.html"> <strong>Lab 3</strong></a></li>
+          
+         <!-- <li><a href="https://github.com/orderedlist/minimal/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="http://github.com/orderedlist/minimal">Fork On <strong>GitHub</strong></a></li>-->
+        </ul>
+        <ul>
+          <li><a href="/labs/lab4.html"> <strong>Lab 4</strong></a></li>
+          <li><a href="/labs/lab5.html"> <strong>Lab 5</strong></a></li>
+          <li><a href="/labs/lab6.html"> <strong>Lab 6</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Lab 4 : Characterization</h1>
+
+        <!--<p><em>View the <a href="http://github.github.com/github-flavored-markdown/sample_content.html">source of this content</a>.</em></p>-->
+
+        <h2>Objective</h2>
+
+
+        <p>The objective of this lab is to familiarize ourselves with the hardware available and set up a baseline. This is allow us to leveage the harware better and allow us to replicate the manual actions using autonomous behavior.
+          To methodically document the behavior, we need to do multiple measurements and average out the readings to obtain accurate results. 
+        </p>
+        
+        <h2>Materials and Tools Used </h2>
+        <ul>
+            <li>1 RC car</li>
+            <li>850mAh LiPo battery</li>
+            <li>Remote Control</li>
+        </ul>
+        <h2>Procedure</h2>
+        
+            
+            <h3>A</h3><br>
+            <img src="/img/lab4/A.png" alt="Img">
+
+            The basic properties like weight, dimensions and battery time are essential to properly callibrate and automate the RC car.
+
+            <h3>B</h3><br>
+
+            <ol>
+            <li>
+                <h1>Axis rotation drift</h3><br>
+                  The drift that the RC car accrues when rotating about its own axis will be useful when we use the sensor to autonomously turn. A few extra degrees of rotation can lead to the robot encountering an obstacle or deviate from its path.
+                <br>
+                
+                In the embedded video, we can see that the Rc car drifts randomly when continuously rotating on its axis.
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Zc8_hJEvRaM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                The experiment was performed multiple times rotating the car both Left and Right.
+
+                <img src="/img/lab4/Rotation.png" alt="Img">
+              </li>
+            <li>
+              <h3>Stunts</h3><br>
+              For the next task, we perform various stunts so that we can replicate a similar performance using the Artemis.
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/iEdZYuaSez8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <br>
+            </li>
+        </ol>
+
+              
+    </div>
+    <script src="/javascripts/scale.fix.js"></script>
+  </body>
+</html>
