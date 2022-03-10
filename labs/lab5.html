@@ -59,7 +59,7 @@
             The RC car has two motors, each controlling the wheels on one side of the car. A motor driver (DRV8833 Dual Motor Driver) can drive 2 different motors at the same time. However, to ensure that 
             the motors receive sufficient current to fast, we connect both the channels in parallel, supplying double the current to each motor. We also connect the inputs of the motor 
             driver in parallel
-
+            <br>
             <img src="/img/lab5/beforedis.png" alt="Img" width="200">
 
             <br>
@@ -70,33 +70,33 @@
             First, we short out (AOut1, BOut1), (AOut2, BOut2),(AOIt1, BIn1), (AIn2, BIn2) to place both the motor outputs in parallel. Then connect it to the Artemis and use an external powersupply to check that it is outputting
             a clean PWM signal. This driver has an operating voltage of 2.7-10.8V, so when testing on the power supply I the 6V output. The max current froma  single output of the motor driver is 1.2A. However, because we put them in parallel, the effective current 
             avaialble to us is 2.4A, which will let the motor go faster.
-
+            <br>
             <img src="/img/lab5/oscilloscope.jpg" alt="Img" width="200">
-
+            <br>
             Once we confirm that the wiring is sorrect, we wire the outputs of the motor driver to the motors, while sill powering it on with the power supply. We rotate the wheels forward and backward, and with different PWM duty cycles to check speed control.
-
+            <br>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/_qsfpfiJf4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            
+            <br>  
             <iframe width="560" height="315" src="https://www.youtube.com/embed/PVnnTxq_1zM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+            <br>
             
             <br><br>
             <h2>Assembling the Robot</h2><br>
 
             Next, we wite the motor drive so that they are powered using the 850mAh battery. Now, we can pre program the arduino to perform actions like turning and going straight.
-
+            <br>
             <img src="/img/lab5/assembled.jpg" alt="Img" width="200">
-
+            <br>
 
             When the wheels are floating in the air, we need as little as 8% dutycycle (20/255) to turn the wheels. When the wheels are on the ground, we need a higher duty cycle to start turning the wheel to overcome friction. But, we can recude it once the car is in potion
-
+            <br>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/dA-f19tvp3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+            <br>
             In the above video, the car is programmed to start after 5s, go forward for 1s, turn left and reverse for 1s.
 
-            Both the motors were rotating at the same speed. So, no calibration was required to moake it go in a straight line.
+            Both the motors were rotating at the same speed. So, no calibration was required to moake it go in a straight line. <br>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/BZh_Vc98RJA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-   
+            <br>
           </div>
     <script src="/javascripts/scale.fix.js"></script>
   </body>
